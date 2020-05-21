@@ -4,3 +4,6 @@
 [submodule "TWENET/current/src/mwx"]
 	path = TWENET/current/src/mwx
 	url = https://github.com/monowireless/mwx
+[submodule "TWENET/current/src/twesettings"]
+	path = TWENET/current/src/twesettings
+	url = https://github.com/monowireless/twesettings
