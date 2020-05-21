@@ -1,0 +1,3 @@
+#define VERSION_MAIN 1
+#define VERSION_SUB 3
+#define VERSION_VAR 0
