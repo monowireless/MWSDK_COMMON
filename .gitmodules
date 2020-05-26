@@ -22,4 +22,3 @@
 [submodule "Wks_TweApps/App_PAL"]
 	path = Wks_TweApps/App_PAL
 	url = https://github.com/monowireless/App_PAL
-	branch = master
