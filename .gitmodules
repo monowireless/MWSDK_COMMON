@@ -25,3 +25,6 @@
 [submodule "Wks_TweApps/App_Wings"]
 	path = Wks_TweApps/App_Wings
 	url = https://github.com/monowireless/App_Wings
+[submodule "Wks_TweApps/App_Melody"]
+	path = Wks_TweApps/App_Melody
+	url = https://github.com/monowireless/App_Melody
