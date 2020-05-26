@@ -7,3 +7,19 @@
 [submodule "TWENET/current/src/twesettings"]
 	path = TWENET/current/src/twesettings
 	url = https://github.com/monowireless/twesettings
+[submodule "Wks_TweApps/App_IO"]
+	path = Wks_TweApps/App_IO
+	url = https://github.com/monowireless/App_IO
+[submodule "Wks_TweApps/App_Uart"]
+	path = Wks_TweApps/App_Uart
+	url = https://github.com/monowireless/App_Uart
+[submodule "Wks_TweApps/App_Twelite"]
+	path = Wks_TweApps/App_Twelite
+	url = https://github.com/monowireless/App_Twelite
+[submodule "Wks_TweApps/App_Tag"]
+	path = Wks_TweApps/App_Tag
+	url = https://github.com/monowireless/App_Tag
+[submodule "Wks_TweApps/App_PAL"]
+	path = Wks_TweApps/App_PAL
+	url = https://github.com/monowireless/App_PAL
+	branch = master
