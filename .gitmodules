@@ -22,3 +22,6 @@
 [submodule "Wks_TweApps/App_PAL"]
 	path = Wks_TweApps/App_PAL
 	url = https://github.com/monowireless/App_PAL
+[submodule "Wks_TweApps/App_Wings"]
+	path = Wks_TweApps/App_Wings
+	url = https://github.com/monowireless/App_Wings
