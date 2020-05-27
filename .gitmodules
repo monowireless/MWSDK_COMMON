@@ -28,3 +28,21 @@
 [submodule "Wks_TweApps/App_Melody"]
 	path = Wks_TweApps/App_Melody
 	url = https://github.com/monowireless/App_Melody
+[submodule "Wks_TweApps/Samp_Wayback"]
+	path = Wks_TweApps/Samp_Wayback
+	url = https://github.com/monowireless/Samp_Wayback
+[submodule "Wks_TweApps/Samp_SPI"]
+	path = Wks_TweApps/Samp_SPI
+	url = https://github.com/monowireless/Samp_SPI
+[submodule "Wks_TweApps/Samp_PingPong"]
+	path = Wks_TweApps/Samp_PingPong
+	url = https://github.com/monowireless/Samp_PingPong
+[submodule "Wks_TweApps/Samp_PER"]
+	path = Wks_TweApps/Samp_PER
+	url = https://github.com/monowireless/Samp_PER
+[submodule "Wks_TweApps/Samp_I2C"]
+	path = Wks_TweApps/Samp_I2C
+	url = https://github.com/monowireless/Samp_I2C
+[submodule "Wks_TweApps/Samp_ContTX"]
+	path = Wks_TweApps/Samp_ContTX
+	url = https://github.com/monowireless/Samp_ContTX
