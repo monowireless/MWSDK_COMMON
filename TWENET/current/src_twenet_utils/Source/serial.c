@@ -70,6 +70,8 @@ PRIVATE void vRxChar(uint8,uint8 u8Char);
 /****************************************************************************/
 /***        Exported Variables                                            ***/
 /****************************************************************************/
+// enable flag of installing interrupt.
+int _SERIAL_bmTxIntEnabled;
 
 /****************************************************************************/
 /***        Local Variables                                               ***/
@@ -139,6 +141,8 @@ PUBLIC void SERIAL_vInitEx(tsSerialPortSetup *psSetup, tsUartOpt *psUartOpt)
 
     //UART_vRtsStartFlow(psSetup->u8SerialPort); /* [I SP001222_P1 284]*/// Set RTS as Low
 }
+
+
 /** @ingroup grp_Serial
  * Queues a byte for transmission.
  *
@@ -158,10 +162,9 @@ PUBLIC bool_t SERIAL_bTxChar(uint8 u8SerialPort,uint8 u8Chr)
 	MICRO_INT_STORAGE;
 	MICRO_INT_ENABLE_ONLY(0);
     if (QUEUE_bEmpty(asSerialPorts[u8SerialPort].sTxQueue) && UART_bTxReady(u8SerialPort)) {
-        static int bmEnabled;
-        if (!(bmEnabled & (1 << u8SerialPort))) {
+        if (!(_SERIAL_bmTxIntEnabled & (1 << u8SerialPort))) {
             UART_vSetTxInterrupt(u8SerialPort,TRUE); // MW (should do every time? modified to do only once)
-            bmEnabled |= (1 << u8SerialPort);
+            _SERIAL_bmTxIntEnabled |= (1 << u8SerialPort);
         }
 
         UART_vTxChar(u8SerialPort,u8Chr);
@@ -319,6 +322,8 @@ PUBLIC void SERIAL_vFlush(uint8 u8Uart)
     while ( !(u8AHI_UartReadLineStatus(u8Uart) & E_AHI_UART_LS_TEMT) );
 
     UART_vSetTxInterrupt(u8Uart, TRUE); // RELEASE TX INT.
+
+    _SERIAL_bmTxIntEnabled = 0; // just in case, reset the TxInt enabled flag.
 }
 
 /****************************************************************************/
