@@ -4,6 +4,10 @@ MWSDK(Win/macOS/Linux) から各ライブラリ、サンプルなど共通部を
 
 
 
+*MWSDK は [TWELITE STAGE](https://mono-wireless.com/jp/products/stage/) の一部として配布される、TWELITE 無線マイコンのファームウェア生成のためのツール群です。*
+
+
+
 ## ZIP ダウンロードについて
 
 Github 上のZIPダウンロードも同様にサブモジュールに含まれるファイルは含まれません。以下のレポジトリより別々にダウンロードしてください。
