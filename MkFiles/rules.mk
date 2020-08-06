@@ -266,6 +266,7 @@ ifeq ($(MWX),1)
 	@$(MKDIR) -p $(OBJDIR)/networks
 	@$(MKDIR) -p $(OBJDIR)/sensors
 	@$(MKDIR) -p $(OBJDIR)/sensors/legacy
+	@$(MKDIR) -p $(OBJDIR)/settings
 endif
 
 # note: clean/cleanall will keep a target `.bin' file.

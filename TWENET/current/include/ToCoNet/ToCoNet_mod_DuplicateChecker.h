@@ -30,12 +30,14 @@ extern volatile uint32 u32TickCount_ms;
  * タイムアウトまでに対象ノードからパケットが受信されない場合、ビットマップをクリアする。
  * （タイムアウト前と同じ番号のパケットが来ても受理する）
  */
-#define TOCONET_DUPCHK_TIMEOUT_ms 1000
+extern uint16 TOCONET_DUPCHK_TIMEOUT_ms;
 
 /** @ingroup grp_ToCoNet_DuplicateChecker
- *
+ * 管理する時間単位(最大のタイムアウト時間を制限)
+ * 5 なら、2^5=32[ms] で１カウント、最大127まで使用するため、
+ * タイムアウトは 32*127 で 4000ms 程度である。
  */
-#define TOCONET_DUPCHK_TICK_SCALE 5
+extern uint8 TOCONET_DUPCHK_TICK_SCALE;
 
 /** @ingroup grp_ToCoNet_DuplicateChecker
  * 重複チェックのノード探索

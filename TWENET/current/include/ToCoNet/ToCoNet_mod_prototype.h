@@ -21,6 +21,15 @@
 extern "C" {
 #endif // C++
 
+// 内部モジュールID
+#define ToCoNet_MOD_MAC 0 //!< ネットワークモジュール
+#define ToCoNet_MOD_TX 1 //!< ネットワークモジュール
+#define ToCoNet_MOD_NWK 2 //!< ネットワークモジュール
+#define ToCoNet_MOD_NBSCAN 3 //!< 近隣探索（探索側）
+#define ToCoNet_MOD_NBSCAN_SLAVE 4 //!< 近隣探索（被探索側）
+#define ToCoNet_MOD_CH_MANAGER 5 //!< チャネル管理
+#define ToCoNet_MOD_NWK_MSG_POOL 6 //!< メッセージプール
+
 // Module: EnergyScan
 #if defined(ToCoNet_USE_MOD_ENERGYSCAN) || defined(ToCoNet_LIB_BUILD)
 #define ToCoNet_REG_MOD_ENERGYSCAN() ToCoNet_vReg_mod_EnergyScan()
