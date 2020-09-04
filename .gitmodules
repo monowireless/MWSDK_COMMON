@@ -46,3 +46,15 @@
 [submodule "Wks_TweApps/Samp_ContTX"]
 	path = Wks_TweApps/Samp_ContTX
 	url = https://github.com/monowireless/Samp_ContTX
+[submodule "Act_extras/ActEx_DIO_Trans"]
+	path = Act_extras/ActEx_DIO_Trans
+	url = https://github.com/monowireless/ActEx_DIO_Trans
+[submodule "Act_extras/ActEx_Sns_VL53L1X"]
+	path = Act_extras/ActEx_Sns_VL53L1X
+	url = https://github.com/monowireless/ActEx_Sns_VL53L1X
+[submodule "Act_extras/ActEx_Sns_BME280_SHT30"]
+	path = Act_extras/ActEx_Sns_BME280_SHT30
+	url = https://github.com/monowireless/ActEx_Sns_BME280_SHT30
+[submodule "Act_extras/ActEx_Sns_MLX90614"]
+	path = Act_extras/ActEx_Sns_MLX90614
+	url = https://github.com/monowireless/ActEx_Sns_MLX90614
