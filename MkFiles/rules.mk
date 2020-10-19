@@ -15,6 +15,9 @@ CFLAGS += -DVERSION_VAR=$(VERSION_VAR)
 ##############################################################################
 # OS specific.
 
+# default tool chain
+TOOLCHAIN_PATH = ba-elf-ba2-r36379
+
 # Configure for WSL (Windows Subsystem Linux)
 ifneq ($(origin WSLENV),undefined)
 $(info !!!WSL environment, use Linux toolchain instead.)
@@ -26,7 +29,7 @@ ifeq ($(MWX),1)
   TOOLCHAIN_PATH = ba-elf-ba2-r36379.w10
   TOOL_EXE_SUFF=.exe
 endif
-  CMDPATH=$(MWSDK_PATH)/Tools/MinGW/msys/1.0/bin
+  CMDPATH=$(realpath $(TOOL_COMMON_BASE_DIR)/MinGW/msys/1.0/bin)
   RM=$(CMDPATH)/rm
   MKDIR=$(CMDPATH)/mkdir
   SLEEP=$(CMDPATH)/sleep
@@ -38,6 +41,14 @@ else
   SLEEP=sleep
 endif
 
+##############################################################################
+# check Tools dir
+TOOLCHAIN_FULL_PATH:=$(realpath $(SDK_BASE_DIR)/../../Tools/$(TOOLCHAIN_PATH))
+ifeq ($(TOOLCHAIN_FULL_PATH),)
+  TOOLCHAIN_FULL_PATH:=$(realpath $(SDK_BASE_DIR)/../../../Tools/$(TOOLCHAIN_PATH))
+endif
+
+TOOL_COMMON_BASE_DIR:=$(realpath $(TOOLCHAIN_FULL_PATH)/..)
 
 ##############################################################################
 # Configure for the selected chip or chip family
