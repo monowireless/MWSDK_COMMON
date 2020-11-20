@@ -21,7 +21,7 @@ TOOLCHAIN_PATH = ba-elf-ba2-r36379
 # Configure for WSL (Windows Subsystem Linux)
 ifneq ($(origin WSLENV),undefined)
 $(info !!!WSL environment, use Linux toolchain instead.)
-TOOLCHAIN_PATH = ba-elf-ba2-r36379.w10
+TOOLCHAIN_PATH = ba-elf-ba2-r36379.wsl
 endif
 
 ifeq ($(OS),Windows_NT)  
