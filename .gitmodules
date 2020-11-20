@@ -58,3 +58,9 @@
 [submodule "Act_extras/ActEx_Sns_MLX90614"]
 	path = Act_extras/ActEx_Sns_MLX90614
 	url = https://github.com/monowireless/ActEx_Sns_MLX90614
+[submodule "Wks_TweApps/App_CUE"]
+	path = Wks_TweApps/App_CUE
+	url = https://github.com/monowireless/App_CUE.git
+[submodule "Wks_TweApps/App_CUE_OTA"]
+	path = Wks_TweApps/App_CUE_OTA
+	url = https://github.com/monowireless/App_CUE_OTA.git
