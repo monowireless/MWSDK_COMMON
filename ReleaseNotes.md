@@ -11,6 +11,52 @@
 
 
 
+# MWSDK2020_12
+
+## TweApps
+
+### App_CUE 1.0.1
+
+* 新規
+
+### App_CUE_OTA 1.0.1
+
+* 新規
+
+### App_Wings 1.1.4
+
+* TWELITE CUE対応
+
+### App_PAL 1.3.2
+
+* TWELITE CUE 用のコードを追加
+* NOTICEPALに受信のみモードを実装
+
+
+
+## Act_samples
+
+* Unit_PktParser の追加 (シリアル電文パーサー)
+* Unit_EEPROM の追加 (EEPROMの読み書き)
+* Unit_ADC (ADCの読み取り)
+* Unit_CUE (TWELITE CUEのAct対応)
+
+
+
+## mwx - 0.1.7
+
+- pkt_parser の追加 (シリアルメッセージを解釈)
+- EEPROM クラスの追加 (EEPROM の読み書き)
+- receive_nwkless_pkt オプションを追加。NWK_SIMPLEネットワーク下で、無線パケットのアプリケーションID,チャネルは一致した通常パケットを受信することが出来る。
+
+
+
+## twesettings - 0.2.6
+
+* tweinteractive_defmenus.c が提供するメニューで項目数が10を超えたときの、リスト表示・選択動作の問題を修正。
+
+
+
 # MWSDK2020_10
 
 mwx ライブラリの更新、サンプルの追加・更新、より実践的なサンプル Actエクストラ(ActEx_???) の収録を行いました。
