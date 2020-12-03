@@ -5,4 +5,5 @@ COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK202
   CHIP LIBRARY VERSION: SW4063V1416
   TWENET (TWELITE NET) C LIBRARY VERSION: L1304
   MWX C++ LIBRARY VERSION: https://github.com/monowireless/mwx/releases/tag/0.1.7
-  TWESETTINGS LIBRARY: https://github.com/monowireless/twesettings/releases/tag/0.2.6
+  TWESETTINGS LIBRARY: https://github.com/monowireless/twesettings/releases/tag/0.2.5
+    (note: TWENET/current/src/twesettings is on version 0.2.6)
