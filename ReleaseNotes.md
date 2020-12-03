@@ -45,6 +45,7 @@
 
 ## mwx - 0.1.7
 
+- 詳細は https://mwx.twelite.info/v/latest/ を参照
 - pkt_parser の追加 (シリアルメッセージを解釈)
 - EEPROM クラスの追加 (EEPROM の読み書き)
 - receive_nwkless_pkt オプションを追加。NWK_SIMPLEネットワーク下で、無線パケットのアプリケーションID,チャネルは一致した通常パケットを受信することが出来る。
@@ -52,6 +53,8 @@
 
 
 ## twesettings - 0.2.6
+
+コンパイル済みのライブラリは 2.5 のまま。ソースコードのみ。
 
 * tweinteractive_defmenus.c が提供するメニューで項目数が10を超えたときの、リスト表示・選択動作の問題を修正。
 
