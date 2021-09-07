@@ -27,6 +27,8 @@
 #ifndef  BYTE_QUEUE_H_INCLUDED
 #define  BYTE_QUEUE_H_INCLUDED
 
+#include <jendefs.h>
+
 #if defined __cplusplus
 extern "C" {
 #endif
@@ -63,7 +65,8 @@ extern "C" {
  * @param q Queue instance
  * @return TRUE if queue is full, FALSE otherwise.
  */
-#define QUEUE_bFull(q)          QUEUE__bFull(QUEUE_REF(q))
+//#define QUEUE_bFull(q)          QUEUE__bFull(QUEUE_REF(q))
+#define QUEUE_bFull(q)          ((q).u16Count == (q).u16Size) // to MACRO
 
 /** @ingroup grp_ByteQueue
  *
@@ -72,7 +75,8 @@ extern "C" {
  * @param q Queue instance
  * @return TRUE if queue is empty, FALSE otherwise.
  */
-#define QUEUE_bEmpty(q)         QUEUE__bEmpty(QUEUE_REF(q))
+//#define QUEUE_bEmpty(q)         QUEUE__bEmpty(QUEUE_REF(q))
+#define QUEUE_bEmpty(q)         ((q).u16Count == 0) // to MACRO
 
 /** @ingroup grp_ByteQueue
  *
@@ -100,13 +104,19 @@ extern "C" {
  * @param p Set to TRUE to lock interrupts during the access.
  *
  */
-#define QUEUE_vAddItem(q, i,p)    QUEUE__vAddItem(QUEUE_REF(q), (i),(p))
+#define QUEUE_vAddItem(q,i,p)    QUEUE__vAddItem(QUEUE_REF(q), (i),(p))
 
 /** @ingroup grp_ByteQueue
- * Remove all items in the queue.
+ * Remove all items in the queue with blocking IRQs
  * @param q Queue instance
  */
 #define QUEUE_vFlush(q)         QUEUE__vFlush(QUEUE_REF(q))
+
+/** @ingroup grp_ByteQueue
+ * Remove all items in the queue. (MACRO)
+ * @param q Queue instance
+ */
+#define QUEUE_vFlush_M(q)   ((q).u16Count = (q).u16Head = (q).u16Tail = 0)
 
 /** @ingroup grp_ByteQueue
  * Get the number of items in the queue

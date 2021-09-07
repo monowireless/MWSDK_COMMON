@@ -41,8 +41,8 @@
 
 #include <jendefs.h>
 
-#include "Interrupt.h"
 #include "ByteQueue.h"
+#include "Interrupt.h"
 
 /****************************************************************************/
 /***        Macro Definitions                                             ***/
@@ -100,14 +100,14 @@ PUBLIC void QUEUE__vAddItem(tsQueue *psQueue, uint8 u8Item,bool_t bProtected)
 {
     if (psQueue->u16Count < psQueue->u16Size)
     {
-        /* Space available in buffer so add data */
-        psQueue->u8Buff[psQueue->u16Head++] = u8Item;
-
         /* read, modify write operation must be atomic */
         if (bProtected == TRUE)
         {
         	MICRO_INT_STORAGE;
         	MICRO_INT_ENABLE_ONLY(0);
+            /* Space available in buffer so add data */
+            psQueue->u8Buff[psQueue->u16Head++] = u8Item;
+
 			if (psQueue->u16Head == psQueue->u16Size) {
 				psQueue->u16Head = 0;
 			}
@@ -116,11 +116,16 @@ PUBLIC void QUEUE__vAddItem(tsQueue *psQueue, uint8 u8Item,bool_t bProtected)
         }
         else
         {
+            /* Space available in buffer so add data */
+            psQueue->u8Buff[psQueue->u16Head++] = u8Item;
+
 			if (psQueue->u16Head == psQueue->u16Size) {
 				psQueue->u16Head = 0;
 			}
 			psQueue->u16Count++;
         }
+    } else {
+    	; // QUEUE FULL
     }
 }
 
@@ -143,19 +148,22 @@ PUBLIC uint8 QUEUE__u8RemoveItem(tsQueue *psQueue,bool_t bProtected)
 
     if (psQueue->u16Count > 0)
     {
-        /* Data available in buffer so remove data */
-        u8Item = psQueue->u8Buff[psQueue->u16Tail++];
-
         if (bProtected == TRUE)
         {
         	MICRO_INT_STORAGE;
         	MICRO_INT_ENABLE_ONLY(0);
+            /* Data available in buffer so remove data */
+            u8Item = psQueue->u8Buff[psQueue->u16Tail++];
+
         	if (psQueue->u16Tail == psQueue->u16Size) {
 				psQueue->u16Tail = 0;
 			}
             psQueue->u16Count--;
 			MICRO_INT_RESTORE_STATE();
         } else {
+            /* Data available in buffer so remove data */
+            u8Item = psQueue->u8Buff[psQueue->u16Tail++];
+
         	if (psQueue->u16Tail == psQueue->u16Size) {
 				psQueue->u16Tail = 0;
 			}

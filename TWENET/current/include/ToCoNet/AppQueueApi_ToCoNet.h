@@ -44,13 +44,8 @@
  * Released under MW-SLA-*J,*E (MONO WIRELESS SOFTWARE LICENSE   *
  * AGREEMENT).                                                   */
 
-
 #ifndef  APP_Q_API_H_INCLUDED
 #define  APP_Q_API_H_INCLUDED
-
-#if defined __cplusplus
-extern "C" {
-#endif
 
 /****************************************************************************/
 /***        Include Files                                                 ***/
@@ -75,6 +70,11 @@ typedef struct
     uint32 u32DeviceId;
     uint32 u32ItemBitmap;
 } AppQApiHwInd_s;
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif // C++
 
 /****************************************************************************/
 /***        Exported Functions                                            ***/
