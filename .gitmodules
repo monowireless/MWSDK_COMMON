@@ -67,3 +67,6 @@
 [submodule "Wks_TweApps/App_ARIA"]
 	path = Wks_TweApps/App_ARIA
 	url = https://github.com/monowireless/App_ARIA.git
+[submodule "Wks_TweApps/App_ARIA_OTA"]
+	path = Wks_TweApps/App_ARIA_OTA
+	url = https://github.com/monowireless/App_ARIA_OTA.git
