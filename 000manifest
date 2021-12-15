@@ -1,9 +1,9 @@
-NAME: MWSDK2021_09
-DATE: 2021-09-09
+NAME: MWSDK2021_12
+DATE: 2021-12-15
 
-COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK2021_09
+COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK2021_12
   CHIP LIBRARY VERSION: SW4063V1416
   TWENET (TWELITE NET) C LIBRARY VERSION: L1305
-  MWX C++ LIBRARY VERSION: https://github.com/monowireless/mwx/releases/tag/0.1.8
+  MWX C++ LIBRARY VERSION: https://github.com/monowireless/mwx/releases/tag/0.1.9
   TWESETTINGS LIBRARY: https://github.com/monowireless/twesettings/releases/tag/0.2.5
     (note: TWENET/current/src/twesettings is on version 0.2.6)
