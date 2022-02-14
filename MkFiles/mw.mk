@@ -16,12 +16,14 @@ include $(MWSDK_PATH)/MkFiles/chipsel.mk
 
 ##########################################################################
 # add default source
+ifneq ($(NO_SRC_INCL_FROM_TOPDIR),1)
 APPSRC_CXX += $(subst ../,,$(wildcard ../*.cpp))
 _APPSRC_CXX = $(sort $(APPSRC_CXX))
 APPSRC_CXX := $(_APPSRC_CXX)
 APPSRC += $(subst ../,,$(wildcard ../*.c))
 _APPSRC = $(sort $(APPSRC))
 APPSRC := $(_APPSRC)
+endif
 
 ##########################################################################
 # add default source

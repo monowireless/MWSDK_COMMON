@@ -13,7 +13,6 @@ JENNIC_STACK ?= MAC
 DEVICE_TYPE ?= ED
 
 ##############################################################################
-# Debug options define DEBUG for HW debug
 #DEBUG ?=HW
 
 # Define which UART to use for debug
@@ -54,10 +53,13 @@ APP_STACK_SRC_DIR_ADD3 = $(APP_TWENET_BASE)/include/TWENETstgs
 endif
 
 # MWX C++ library
+ifeq ($(TARGET_TYPE),bin)
 ifeq ($(MWX),1)
 ifeq ($(TWENET_HAS_MWX),1)
 $(info !!!use MWX C++ template library)
+ifeq ($(MWX_RECOMP_LIB),1) # if recompile everything
 include $(APP_TWENET_BASE)/src/mwx/mwx_sources.mk
+endif
 APP_MWX_SRC_DIR = $(APP_TWENET_BASE)/src/mwx
 LDFLAGS += -L$(APP_MWX_SRC_DIR)
 else
@@ -65,6 +67,7 @@ $(error !!!TWENET library does not have MWX.)
 endif
 endif
 
+endif
 
 ##############################################################################
 # Additional Application Library
@@ -90,6 +93,10 @@ ADDITIONAL_LIBS += $(APP_TWENET_BASE)/lib/libTWENETstgs_$(_TWELITE).a
 endif
 endif
 
+ifeq ($(MWX_RECOMP_LIB),0)
+ADDITIONAL_LIBS += $(APP_TWENET_BASE)/lib/libmwx_$(_TWELITE).a
+endif 
+
 ##############################################################################
 # Additional Application Source directories
 # Define any additional application directories outside the application directory
@@ -110,7 +117,10 @@ endif
 INCFLAGS += -I$(APP_STACK_SRC_DIR_ADD1)
 INCFLAGS += -I$(APP_STACK_SRC_DIR_ADD2)
 INCFLAGS += -I$(APP_STACK_SRC_DIR_ADD3)
+
+ifeq ($(MWX),1)
 INCFLAGS += -I$(APP_MWX_SRC_DIR)
+endif
 
 INCFLAGS += -I$(COMPONENTS_BASE_DIR)
 INCFLAGS += -I$(COMPONENTS_BASE_DIR)/MicroSpecific/Include

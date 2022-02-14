@@ -8,6 +8,9 @@
 # USE MWX library
 MWX=1
 
+# MWX_RECOMP_LIB   1:always recompile, 0:use precompiled lib
+MWX_RECOMP_LIB=0
+
 ##########################################################################
 # SET PROJNAME and TARGET_DIR
 # assume Wks_MWX/TARGET_DIR/build dir structure.
@@ -22,12 +25,14 @@ include $(MWSDK_PATH)/MkFiles/chipsel.mk
 ##########################################################################
 # add default source
 #APPSRC_CXX += $(TARGET_DIR).cpp
+ifneq ($(NO_SRC_INCL_FROM_TOPDIR),1)
 APPSRC_CXX += $(subst ../,,$(wildcard ../*.cpp))
 _APPSRC_CXX = $(sort $(APPSRC_CXX))
 APPSRC_CXX := $(_APPSRC_CXX)
 APPSRC += $(subst ../,,$(wildcard ../*.c))
 _APPSRC = $(sort $(APPSRC))
 APPSRC := $(_APPSRC)
+endif
 
 ##########################################################################
 # add default source
