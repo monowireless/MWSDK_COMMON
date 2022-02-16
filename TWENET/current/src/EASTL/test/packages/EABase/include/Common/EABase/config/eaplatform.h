@@ -579,7 +579,6 @@
 // __sparc is defined by the Sun and GCC compilers.
 #elif defined(JN516x)
 #define EA_PLATFORM_JN516X
-#define EA_SYSTEM_BIG_ENDIAN 1
 //    EA_PLATFORM_NAME = <string>
 #define EA_PLATFORM_NAME "JN516x"
 //    EA_PLATFORM_DESCRIPTION = <string>
@@ -589,7 +588,7 @@
 //    EA_MISALIGNED_SUPPORT_LEVEL=0|1|2
 #define EA_MISALIGNED_SUPPORT_LEVEL 0
 //    EA_SYSTEM_LITTLE_ENDIAN | EA_SYSTEM_BIG_ENDIAN
-#define EA_SYSTEM_BIG_ENDIAN
+#define EA_SYSTEM_BIG_ENDIAN 1
 //    EA_ASM_STYLE_ATT | EA_ASM_STYLE_INTEL | EA_ASM_STYLE_MOTOROLA
 #define EA_ASM_STYLE_ATT 1
 //    EA_PLATFORM_PTR_SIZE = <integer size in bytes>
