@@ -36,6 +36,8 @@ APPSRC_CXX += numeric_limits.cpp
 APPSRC_CXX += red_black_tree.cpp
 APPSRC_CXX += string.cpp
 #APPSRC_CXX += thread_support.cpp
+APPSRC_CXX += EAMemory.cpp
+APPSRC_CXX += EASprintf.cpp
 
 ### for C files compiled with gcc (must have .c suffix)
 #APPSRC += my_c_file.c
@@ -44,7 +46,7 @@ APPSRC_CXX += string.cpp
 # if set, find source files from given dirs.
 #
 APP_COMMON_SRC_DIR_ADD1 = ../source
-#APP_COMMON_SRC_DIR_ADD2 = ../my_common_dir
+APP_COMMON_SRC_DIR_ADD2 = ../test/packages/EAStdC/source
 #APP_COMMON_SRC_DIR_ADD3 = 
 #APP_COMMON_SRC_DIR_ADD4 =
 
