@@ -189,7 +189,7 @@ endif
 
 #########################################################################
 # Main Section
-.PHONY: all clean cleanall
+.PHONY: all clean cleanall _mwx_version.c
 
 # Path to directories containing application source 
 ifneq ($(PROJNAME),)
@@ -218,7 +218,12 @@ $(APPDEPS):
 include $(wildcard $(APPDEPS))
 endif
 
-# build rules
+_mwx_version.c:
+	@echo "#include <stdint.h>" > $@
+	@echo "extern uint32_t INTRCT_USER_APP_ID;" >> $@
+	@echo "void MWX_Set_User_App_Ver() {" >> $@
+	@echo "  INTRCT_USER_APP_ID = (VERSION_MAIN << 16) | (VERSION_SUB << 8) | VERSION_VAR; }" >> $@
+
 $(OBJDIR)/%.o: %.S
 	$(info Assembling $< ...)
 	$(CC) -c -o $(subst Source,Build,$@) $(DEPFLAGS) $(CFLAGS) $(INCFLAGS) $< 
