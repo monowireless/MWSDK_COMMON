@@ -22,8 +22,7 @@
   コマンドラインを起動するためのバッチファイルを用意しています。
   MWSDK 内の make コマンドを実行するための設定が含まれています。
 
-  BASH.cmd           : bash (mingw の実行環境)
-  CMD.cmd            : cmd.exe
+  WIN_BASH.cmd           : bash (mingw の実行環境)
 
 
 ■ ライセンスについて
