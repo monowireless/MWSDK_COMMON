@@ -1,29 +1,39 @@
 # MWSDK_COMMON
-MWSDK(Win/macOS/Linux) から各ライブラリ・サンプルのみを切り出しています。
+Include the libraries and various source code necessary for application development from the TWELITE STAGE SDK, but not the TWELITE STAGE app, toolchain, etc.<br>TWELITE STAGE SDK のうち、アプリケーション開発に必要なライブラリや各種ソースコードを含めます。TWELITE STAGE アプリやツールチェインなどは含みません。
 
-リリースごとの変更内容については[改訂履歴](ReleaseNotes.md)を参照ください。
-
-## 本レポジトリに含まれるディレクトリ
-
-* ChipLib
-* LICENSE
-* MkFiles
-* TWENET
-* Act_samples
-* Act_extras
-* Wks_TweApps
+Please refer to [Revision History](ReleaseNotes_en.md) for details of changes for each release.<br>
+リリースごとの変更内容については[改訂履歴](ReleaseNotes_jp.md)を参照ください。
 
 
-## 本レポジトリに含まれないディレクトリ
 
-* Act サンプル追加分 (以下リンク先のレポジトリ一覧を開いて ActEx??? を個別に参照してください)
-  https://github.com/monowireless?tab=repositories
-* ツール (Tools)
-  サイズが巨大なため別途配布しています。
-  https://mono-wireless.com/stage より TWELIET STAGE 配布パッケージ一式に含まれます。
+## Folders / フォルダ
+
+The following is a list of the main folders included in this repository.<br>本レポジトリに含まれる主要フォルダを列挙します。
 
 
-## MWSDK の更新方法
-以下を参照ください。
-> https://sdk.twelite.info/latest
 
+* ChipLib - Silicon Chip library
+* LICENSE - License files
+* MkFiles - Make files
+* TWENET - TWENET libraries
+* Act_samples - Sample code (ACT)
+* Act_extras - Sample code, advanced or complicated (ACT)
+* Wks_TweApps - Source code of  TWELITE Apps.
+
+
+
+## Not included / 含まれないもの
+
+The following is a list of items not included in this repository. <br>本レポジトリに含まれないものを列挙します。
+
+
+
+* TWELITE STAGE App / TWELITE STAGE アプリ
+* Tools
+* BIN 
+
+
+
+
+## Updating MWSDK folder / MWSDK フォルダの更新方法
+[Get the latest version - MWSDK(TWELITE SDK)](https://sdk.twelite.info/v/en/latest) / [最新版の取得 - MWSDK(TWELITE SDK)](https://sdk.twelite.info/latest)
