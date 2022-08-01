@@ -1,4 +1,4 @@
-COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK2022_07
+COMMON FILES: https://github.com/monowireless/MWSDK_COMMON/releases/tag/MWSDK2022_08
   CHIP LIBRARY VERSION: SW4063V1416
   TWENET (TWELITE NET) C LIBRARY VERSION: L1305
   MWX C++ LIBRARY VERSION: https://github.com/monowireless/mwx/releases/tag/0.2.0

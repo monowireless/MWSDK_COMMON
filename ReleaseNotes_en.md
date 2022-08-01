@@ -9,6 +9,31 @@ See also the individual libraries below.
 
 The version name is MWSDK{YYYYY}\_{MMM} including the year and month of release, with UNOFFICIAL indicating that the release does not include comprehensive validation work.
 
+# MWSDK2022_08
+
+## TWELITE APPS
+### App_CUE/App_CUE_OTA v1.1.1
+* Fixed unintended output of PALID in MOTION SENSE PAL mode (single shot).
+
+### App_ARIA/App_ARIA_OTA v1.1.1
+* Fixed an anomalous value when the measured temperature reaches 42°C or higher.
+
+### App_PAL v1.5.2
+* Fixed unintended output of PALID in MOTION SENSE PAL (single shot).
+* Fixed an anomalous value when the measured temperature reaches 42°C or higher. (This is a modification for TWELITE ARIA. There are no modifications to the AMBIENT SENSE PAL program.)
+
+### App_PAL v1.2.1
+* Fixed a problem in which the output of App_PAL data sometimes resulted in unintended values.
+
+### App_Uart v1.4.7
+* Changed default retransmission count to 2 times.
+
+## Act_extras
+### ActEx_AQM0802
+  * Supported MWX stream output.
+  * Supported AQM1602 (16x2 row LCD).
+  * Added of a contrast adjustment function.
+
 # MWSDK2022_07
 
 Addition of sample Act, new functions for TWELITE ARIA/TWELITE CUE/TWELITE PAL, etc.
