@@ -76,3 +76,6 @@ url=https://github.com/monowireless/ActEx_AQM0802.git
 [submodule "docs"]
 	path = docs
 	url = https://github.com/monowireless/MWSDK_docs.git
+[submodule "Act_extras/ActEx_Sns_LM61"]
+	path = Act_extras/ActEx_Sns_LM61
+	url = git@github.com:monowireless/ActEx_Sns_LM61.git
